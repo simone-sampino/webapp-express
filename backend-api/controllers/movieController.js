@@ -9,6 +9,7 @@ function index(req, res) {
         error: true,
         message: err.message,
       });
+    console.log(result);
     res.json(result);
   });
 }
@@ -46,6 +47,7 @@ function show(req, res) {
       const movieReviews = result;
       movie.reviews = movieReviews;
 
+      console.log(movie.reviews);
       res.json(movie);
     });
   });
